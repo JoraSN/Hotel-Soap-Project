@@ -2,7 +2,7 @@
  
 Servo myservo; 
  
-int servoPin = 2;
+const int servoPin = 2;
  
 void setup() {
   myservo.setPeriodHertz(50); 
