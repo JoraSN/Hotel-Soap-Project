@@ -1,11 +1,9 @@
 #include <Stepper.h>
-#include <Servo.h>
 
 const int stepsPerRevolution = 350, steps = 175;
 
 Stepper myStepper(stepsPerRevolution, 8, 10, 9, 11);
 Stepper myStepper2(stepsPerRevolution, 8, 9, 10, 11);
-
 
 void setup() {
   pinMode(6, OUTPUT);
@@ -18,8 +16,6 @@ void setup() {
   Serial.begin(9600);
   pinMode(5, INPUT_PULLUP);
   pinMode(4, OUTPUT);
-  pinMode(3, OUTPUT);
-  pinMode(2, INPUT); 
   
 }
 
