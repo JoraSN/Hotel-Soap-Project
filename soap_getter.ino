@@ -1,6 +1,6 @@
 #include <Stepper.h>
 
-const int stepsPerRevolution = 350, steps = 175;
+const int stepsPerRevolution = 523, steps = 175;
 
 // counter clockwise Stepper object
 Stepper myStepper(stepsPerRevolution, 8, 10, 9, 11);
@@ -27,12 +27,8 @@ void loop(){
   int n = digitalRead(7);
   if(but == LOW){
   if(n){
-  for(int i = 0; i < 1; i++){
   myStepper.step(stepsPerRevolution);
   delay(5);
-  myStepper.step(173);
-  }
-  n = 1;
   while(n){
   n = digitalRead(7);
   delay(5);
