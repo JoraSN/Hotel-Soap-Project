@@ -2,7 +2,10 @@
 
 const int stepsPerRevolution = 350, steps = 175;
 
+// counter clockwise Stepper object
 Stepper myStepper(stepsPerRevolution, 8, 10, 9, 11);
+
+// clockwise Stepper object
 Stepper myStepper2(stepsPerRevolution, 8, 9, 10, 11);
 
 void setup() {
