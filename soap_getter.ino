@@ -21,7 +21,6 @@ void setup() {
   myStepper.setSpeed(60);
   myStepper2.setSpeed(20);
   
-  Serial.begin(9600);
   pinMode(button, INPUT_PULLUP);
   pinMode(LED_Buzzer, OUTPUT);
   
@@ -29,13 +28,13 @@ void setup() {
 
 void loop(){
   int but = digitalRead(button);
-  int n = digitalRead(rainLevelSensor);
+  int val = digitalRead(rainLevelSensor);
   if(but == LOW){
-  if(n){
+  if(val){
   myStepper.step(stepsPerRevolution);
   delay(5);
-  while(n){
-  n = digitalRead(rainLevelSensor);
+  while(val){
+  val = digitalRead(rainLevelSensor);
   delay(5);
   }
   for(int i = 0; i < 3; i++){
