@@ -2,7 +2,7 @@
  
 Servo myservo; 
 
-const int custom = 10000; //enter custom duration in ms
+const int custom = 100000; //enter custom duration in ms
 const int servoPin = 2;
 int cond = 1;
  
